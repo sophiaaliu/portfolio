@@ -70,15 +70,14 @@ export const NavigationBar = () => {
 		const windowOnScroll = () => {
 			// scrolling down
 			if (window.scrollY >= prevWindowScrollY.current) {
-				if (!isNavBarExpanded.current) {
-					expandNavBar();
-				}
-				console.log('down');
-			} else {
-				// scrolling up
-				console.log('up');
 				if (isNavBarExpanded.current) {
 					collapseNavBar();
+				}
+			}
+			// scrolling up
+			else {
+				if (!isNavBarExpanded.current) {
+					expandNavBar();
 				}
 			}
 
@@ -92,50 +91,54 @@ export const NavigationBar = () => {
 		};
 	});
 
+	console.log('isMenuOpened', isMenuOpened);
+
 	return (
-		<div
-			className={cls(styles.navBar, {
-				[styles.smallFontSize]: width < 1000,
-				[styles.smallPadding]: width < 1000,
-			})}
-			ref={navBar}
-		>
-			<span>Sophia Liu</span>
-			{width >= 650 && (
-				<>
-					<Link
-						className={cls(styles.link, {
-							[styles.smallMarginRightLink]: width < 1000,
-						})}
-						to="/"
-					>
-						<span>Work</span>
-					</Link>
-					<Link
-						className={cls(styles.link, {
-							[styles.smallMarginRightLink]: width < 1000,
-						})}
-						to="/"
-					>
-						<span>About</span>
-					</Link>
-					<Link
-						className={cls(styles.link, {
-							[styles.smallMarginRightLink]: width < 1000,
-						})}
-						to="/"
-					>
-						<span>Resume</span>
-					</Link>
-				</>
-			)}
-			{width < 650 && (
-				<img
-					src="./svgs/menu.svg"
-					className={styles.menu}
-					onClick={() => setIsMenuOpened(!isMenuOpened)}
-				/>
-			)}
+		<>
+			<div
+				className={cls(styles.navBar, {
+					[styles.smallFontSize]: width < 1000,
+					[styles.smallPadding]: width < 1000,
+				})}
+				ref={navBar}
+			>
+				<span className={styles.name}>SOPHIA LIU</span>
+				{width >= 650 && (
+					<>
+						<Link
+							className={cls(styles.link, {
+								[styles.smallMarginRightLink]: width < 1000,
+							})}
+							to="/"
+						>
+							<span>WORK</span>
+						</Link>
+						<Link
+							className={cls(styles.link, {
+								[styles.smallMarginRightLink]: width < 1000,
+							})}
+							to="/"
+						>
+							<span>ABOUT</span>
+						</Link>
+						<Link
+							className={cls(styles.link, {
+								[styles.smallMarginRightLink]: width < 1000,
+							})}
+							to="/"
+						>
+							<span>RESUME</span>
+						</Link>
+					</>
+				)}
+				{width < 650 && (
+					<img
+						src="./svgs/menu.svg"
+						className={styles.menu}
+						onClick={() => setIsMenuOpened(!isMenuOpened)}
+					/>
+				)}
+			</div>
 			{isMenuOpened && (
 				<div className={styles.links}>
 					<Link
@@ -164,6 +167,6 @@ export const NavigationBar = () => {
 					</Link>
 				</div>
 			)}
-		</div>
+		</>
 	);
 };
