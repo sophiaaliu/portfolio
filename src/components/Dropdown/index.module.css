@@ -1,0 +1,149 @@
+.dropdown {
+	width: 100%;
+}
+
+.note {
+	font-weight: 500;
+	color: rgba(105, 105, 105, 1);
+	width: 100%;
+	text-align: left;
+}
+
+.note.default {
+	font-size: 14px;
+	margin-bottom: 15px;
+}
+
+.note.small {
+	font-size: 14px;
+	margin-bottom: 12px;
+}
+
+.note.smallVertical {
+	font-size: 14px;
+	margin-bottom: 8px;
+}
+
+.selected {
+	width: 100%;
+	border-width: 2px;
+	border-style: solid;
+	border-radius: 20px;
+	display: flex;
+	align-items: center;
+	padding: 0 20px;
+	font-weight: 500;
+	position: relative;
+	cursor: pointer;
+}
+
+.selected.default {
+	font-size: 28px;
+	height: 90px;
+}
+
+.selected.small {
+	font-size: 24px;
+	height: 80px;
+}
+
+.selected.smallVertical {
+	font-size: 18px;
+	height: 65px;
+}
+
+.selected.orange {
+	background-color: rgba(255, 244, 234, 1);
+	border-color: rgba(255, 92, 4, 1);
+}
+
+.selected.purple {
+	background-color: rgba(252, 248, 255, 1);
+	border-color: rgba(164, 0, 234, 1);
+}
+
+.selected.isDropdownOpen {
+	border-radius: 20px 20px 0 0;
+}
+
+.arrow {
+	width: 24px;
+	height: 24px;
+	margin-left: auto;
+}
+
+.arrow.inverted {
+	transform: rotate(180deg);
+}
+
+.arrow.orange {
+	color: rgba(239, 84, 0, 1);
+}
+
+.options {
+	position: absolute;
+	left: -2px;
+	top: 100%;
+	width: calc(100% + 4px);
+	font-weight: 400;
+}
+
+.options.default {
+	font-size: 28px;
+}
+
+.options.small {
+	font-size: 24px;
+}
+
+.options.smallVertical {
+	font-size: 18px;
+}
+
+.option {
+	width: 100%;
+	border-width: 2px;
+	border-style: solid;
+	display: flex;
+	align-items: center;
+	padding: 0 20px;
+	cursor: pointer;
+}
+
+.option.default {
+	height: 90px;
+}
+
+.option.small {
+	height: 80px;
+}
+
+.option.smallVertical {
+	height: 65px;
+}
+
+.option:last-of-type {
+	border-radius: 0 0 20px 20px;
+}
+
+.option:not(:first-of-type) {
+	border-top: none;
+}
+
+.option.orange {
+	background-color: rgba(255, 244, 234, 1);
+	border-color: rgba(255, 92, 4, 1);
+}
+
+.option.orange:hover {
+	background-color: rgba(255, 224, 208, 1);
+}
+
+.option.purple {
+	background-color: rgba(252, 248, 255, 1);
+	border-color: rgba(164, 0, 234, 1);
+}
+
+.option.purple:hover {
+	background-color: rgba(240, 226, 255, 1);
+}

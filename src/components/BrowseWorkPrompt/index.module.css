@@ -1,0 +1,26 @@
+.prompt {
+	font-weight: 400;
+	color: rgba(0, 117, 255, 1);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	cursor: pointer;
+}
+
+.text.default {
+	font-size: 24px !important;
+}
+
+.text.small {
+	font-size: 16px !important;
+}
+
+.arrow.default {
+	margin-top: 24px;
+	width: 51px;
+}
+
+.arrow.small {
+	margin-top: 18px;
+	width: 32px;
+}

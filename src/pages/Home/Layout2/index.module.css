@@ -1,0 +1,41 @@
+.row {
+	width: 100%;
+	display: flex;
+	margin-bottom: 20px;
+}
+
+.row:last-of-type {
+	margin-bottom: 10px;
+}
+
+.leftColumn {
+	margin-right: 45px;
+	width: 40%;
+}
+
+.prompt {
+	width: 100%;
+	text-align: left;
+	font-size: 24px;
+	font-style: italic;
+	font-weight: 700;
+	margin-bottom: 20px;
+}
+
+.bluePrompt {
+	color: rgba(19, 102, 255, 1);
+}
+
+.name {
+	width: 40%;
+}
+
+.role {
+	color: rgba(239, 84, 0, 1);
+	width: 100%;
+}
+
+.do {
+	color: rgba(164, 0, 234, 1);
+	width: 100%;
+}

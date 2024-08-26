@@ -1,0 +1,53 @@
+.nameBox {
+	width: 400px;
+}
+
+.note {
+	font-weight: 500;
+	color: rgba(105, 105, 105, 1);
+}
+
+.note.default {
+	font-size: 14px;
+	margin-bottom: 15px;
+}
+
+.note.small {
+	font-size: 14px;
+	margin-bottom: 12px;
+}
+
+.note.smallVertical {
+	font-size: 14px;
+	margin-bottom: 8px;
+}
+
+.name {
+	font-family: Lato;
+	font-size: 28px;
+	font-weight: 500;
+	width: 100%;
+	border: 2px solid rgba(19, 102, 255, 1);
+	background-color: rgba(249, 250, 255, 1);
+	color: rgba(19, 102, 255, 1);
+	border-radius: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	padding: 0 20px;
+}
+
+.name.default {
+	font-size: 28px;
+	height: 90px;
+}
+
+.name.small {
+	font-size: 24px;
+	height: 70px;
+}
+
+.name.smallVertical {
+	font-size: 24px;
+	height: 60px;
+}
