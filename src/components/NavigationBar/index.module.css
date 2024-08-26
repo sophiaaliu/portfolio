@@ -12,7 +12,6 @@
 	font-size: 16px;
 	font-weight: 500;
 	color: rgba(26, 27, 31, 0.6);
-	clip-path: inset(0 0 0 0);
 	letter-spacing: 1px;
 	backdrop-filter: blur(8px);
 }

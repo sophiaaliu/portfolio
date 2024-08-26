@@ -26,6 +26,12 @@ export const NavigationBar = () => {
 					navBar.current.style.clipPath = `inset(0 0 ${clipPathVal}% 0)`;
 				}
 			})
+			.onComplete(() => {
+				if (navBar.current) {
+					clipPathValRef.current = 0;
+					navBar.current.style.clipPath = 'none';
+				}
+			})
 			.start();
 
 		const animate = () => {
@@ -71,6 +77,7 @@ export const NavigationBar = () => {
 			// scrolling down
 			if (window.scrollY >= prevWindowScrollY.current) {
 				if (isNavBarExpanded.current) {
+					setIsMenuOpened(false);
 					collapseNavBar();
 				}
 			}
@@ -138,35 +145,35 @@ export const NavigationBar = () => {
 						onClick={() => setIsMenuOpened(!isMenuOpened)}
 					/>
 				)}
+				{isMenuOpened && (
+					<div className={styles.links}>
+						<Link
+							className={cls(styles.link, {
+								[styles.smallMarginRightLink]: width < 1000,
+							})}
+							to="/"
+						>
+							Work
+						</Link>
+						<Link
+							className={cls(styles.link, {
+								[styles.smallMarginRightLink]: width < 1000,
+							})}
+							to="/"
+						>
+							About
+						</Link>
+						<Link
+							className={cls(styles.link, {
+								[styles.smallMarginRightLink]: width < 1000,
+							})}
+							to="/"
+						>
+							Resume
+						</Link>
+					</div>
+				)}
 			</div>
-			{isMenuOpened && (
-				<div className={styles.links}>
-					<Link
-						className={cls(styles.link, {
-							[styles.smallMarginRightLink]: width < 1000,
-						})}
-						to="/"
-					>
-						Work
-					</Link>
-					<Link
-						className={cls(styles.link, {
-							[styles.smallMarginRightLink]: width < 1000,
-						})}
-						to="/"
-					>
-						About
-					</Link>
-					<Link
-						className={cls(styles.link, {
-							[styles.smallMarginRightLink]: width < 1000,
-						})}
-						to="/"
-					>
-						Resume
-					</Link>
-				</div>
-			)}
 		</>
 	);
 };
