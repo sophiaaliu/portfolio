@@ -16,10 +16,6 @@
 	backdrop-filter: blur(8px);
 }
 
-.smallFontSize {
-	font-size: 20px !important;
-}
-
 .smallPadding {
 	padding: 0 32px;
 }

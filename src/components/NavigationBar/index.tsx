@@ -98,13 +98,10 @@ export const NavigationBar = () => {
 		};
 	});
 
-	console.log('isMenuOpened', isMenuOpened);
-
 	return (
 		<>
 			<div
 				className={cls(styles.navBar, {
-					[styles.smallFontSize]: width < 1000,
 					[styles.smallPadding]: width < 1000,
 				})}
 				ref={navBar}
