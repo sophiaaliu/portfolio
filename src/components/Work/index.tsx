@@ -1,16 +1,18 @@
 import cls from 'classnames';
 import styles from './index.module.css';
 import { useWindowSize } from '../../lib/hooks';
+import { Suspense } from 'react';
 
 export type WorkProps = {
-	backgroundColor: string;
 	title: string;
 	description: string;
 	className?: string;
+	imageSrc: string;
+	imageHref: string;
 };
 
 export const Work = (props: WorkProps) => {
-	const { backgroundColor, title, description, className } = props;
+	const { imageSrc, imageHref, title, description, className } = props;
 	const { width } = useWindowSize();
 
 	const getTitleFontSize = () => {
@@ -27,7 +29,15 @@ export const Work = (props: WorkProps) => {
 
 	return (
 		<div className={cls(styles.work, className)}>
-			<div style={{ background: backgroundColor }} className={styles.background}></div>
+			<Suspense fallback={<div className={styles.background} />}>
+				<img
+					src={imageSrc}
+					className={cls(styles.image)}
+					onClick={() => {
+						window.open(imageHref);
+					}}
+				/>
+			</Suspense>
 			<div
 				className={cls(styles.meta, {
 					[styles.stack]: width < 600,

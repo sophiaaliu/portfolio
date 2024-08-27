@@ -94,9 +94,15 @@ export const Home = () => {
 					<BrowseWorkPrompt onClick={onBrowseWork} />
 				</div>
 			</div>
-			<div className={styles.workPage}>
+			<div
+				className={cls(
+					styles.workPage,
+					width >= 800 ? styles.defaultPaddingTop : styles.smallPaddingTop,
+				)}
+			>
 				<Work
-					backgroundColor="rgba(229, 224, 255, 1)"
+					imageSrc="./images/wayfarer.png"
+					imageHref="https://sophias-stellar-site-f53327.webflow.io/work/project-1"
 					title="Wayfarer AI"
 					description="How I designed for AI co-pilot in a travel-planning app"
 					className={cls(styles.work, {
@@ -104,7 +110,8 @@ export const Home = () => {
 					})}
 				/>
 				<Work
-					backgroundColor="rgba(100, 72, 239, 1)"
+					imageSrc="./images/wayfarer.png"
+					imageHref="https://sophias-stellar-site-f53327.webflow.io/work/project-1"
 					title="Tempo Labs"
 					description="How I streamlined the flow of idea to MVP for start-up founders"
 					className={cls(styles.work, {
@@ -112,14 +119,15 @@ export const Home = () => {
 					})}
 				/>
 				<Work
-					backgroundColor="rgba(45, 180, 229, 1)"
+					imageSrc="./images/wayfarer.png"
+					imageHref="https://sophias-stellar-site-f53327.webflow.io/work/project-1"
 					title="Silver Lining Community"
 					description="How I designed for 1-1 relationship growth in the foster care community"
-					className={cls(styles.lastWork, {
+					className={cls(styles.work, {
 						[styles.smallMarginBottom]: width < 1200,
 					})}
 				/>
-				<div className={styles.footnote} style={{ fontSize: getFootnoteFontSize() }}>
+				{/*<div className={styles.footnote} style={{ fontSize: getFootnoteFontSize() }}>
 					<span className={styles.footnoteText}>Contact Me</span>
 				</div>
 				<div className={styles.footnote} style={{ fontSize: getFootnoteFontSize() }}>
@@ -127,7 +135,7 @@ export const Home = () => {
 				</div>
 				<div className={styles.footnote} style={{ fontSize: getFootnoteFontSize() }}>
 					<span className={styles.footnoteText}>My Resume</span>
-				</div>
+				</div>*/}
 			</div>
 		</div>
 	);

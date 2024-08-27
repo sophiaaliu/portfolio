@@ -87,8 +87,14 @@
 .workPage {
 	width: 100%;
 	max-width: 1440px;
-	padding-top: 193px;
-	padding-bottom: 337px;
+}
+
+.workPage.defaultPaddingTop {
+	padding-top: 130px;
+}
+
+.workPage.smallPaddingTop {
+	padding-top: 100px;
 }
 
 .work {
@@ -97,14 +103,6 @@
 
 .work.smallMarginBottom {
 	margin-bottom: 60px;
-}
-
-.lastWork {
-	margin-bottom: 199px;
-}
-
-.lastWork.smallMarginBottom {
-	margin-bottom: 100px;
 }
 
 .footnote {
