@@ -38,12 +38,12 @@
 }
 
 .selected.default {
-	font-size: 28px;
+	font-size: 24px;
 	height: 90px;
 }
 
 .selected.small {
-	font-size: 24px;
+	font-size: 20px;
 	height: 80px;
 }
 
@@ -89,11 +89,11 @@
 }
 
 .options.default {
-	font-size: 28px;
+	font-size: 24px;
 }
 
 .options.small {
-	font-size: 24px;
+	font-size: 20px;
 }
 
 .options.smallVertical {

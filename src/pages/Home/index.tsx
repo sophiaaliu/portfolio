@@ -102,7 +102,7 @@ export const Home = () => {
 			>
 				<Work
 					imageSrc="./images/wayfarer.png"
-					imageHref="https://sophias-stellar-site-f53327.webflow.io/work/project-1"
+					imageHref="https://sophiaa-liu-wayfarer.webflow.io/project-1"
 					title="Wayfarer AI"
 					description="How I designed for AI co-pilot in a travel-planning app"
 					className={cls(styles.work, {
@@ -110,7 +110,7 @@ export const Home = () => {
 					})}
 				/>
 				<Work
-					imageSrc="./images/wayfarer.png"
+					imageSrc="./images/tempo.png"
 					imageHref="https://sophias-stellar-site-f53327.webflow.io/work/project-1"
 					title="Tempo Labs"
 					description="How I streamlined the flow of idea to MVP for start-up founders"
