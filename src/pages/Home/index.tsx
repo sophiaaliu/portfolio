@@ -18,11 +18,6 @@ export const Home = () => {
 		return <Layout2 />;
 	};
 
-	const getFootnoteFontSize = () => {
-		if (width >= 1000) return '32px';
-		else return '20px';
-	};
-
 	const getAboutFootSize = () => {
 		if (width >= 1000) return '20px';
 		else return '16px';
@@ -101,10 +96,10 @@ export const Home = () => {
 				)}
 			>
 				<Work
-					imageSrc="./images/wayfarer.png"
-					imageHref="https://sophiaa-liu-wayfarer.webflow.io/project-1"
-					title="Wayfarer AI"
-					description="How I designed for AI co-pilot in a travel-planning app"
+					imageSrc="./images/develop_for_good.png"
+					imageHref="https://sophias-stellar-site-f53327.webflow.io/work/project-1"
+					title="Horizon: Silver Lining Mentoring"
+					description="How I designed for 1-1 relationship growth in the foster care community"
 					className={cls(styles.work, {
 						[styles.smallMarginBottom]: width < 1200,
 					})}
@@ -120,9 +115,9 @@ export const Home = () => {
 				/>
 				<Work
 					imageSrc="./images/wayfarer.png"
-					imageHref="https://sophias-stellar-site-f53327.webflow.io/work/project-1"
-					title="Silver Lining Community"
-					description="How I designed for 1-1 relationship growth in the foster care community"
+					imageHref="https://sophiaa-liu-wayfarer.webflow.io/project-1"
+					title="Wayfarer AI"
+					description="How I designed for AI co-pilot in a travel-planning app"
 					className={cls(styles.work, {
 						[styles.smallMarginBottom]: width < 1200,
 					})}

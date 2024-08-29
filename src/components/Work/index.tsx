@@ -16,14 +16,12 @@ export const Work = (props: WorkProps) => {
 	const { width } = useWindowSize();
 
 	const getTitleFontSize = () => {
-		if (width >= 1200) return '64px';
-		else if (width >= 600) return '32px';
+		if (width >= 600) return '32px';
 		else return '20px';
 	};
 
 	const getDescriptionFontSize = () => {
-		if (width >= 1200) return '32px';
-		else if (width >= 600) return '20px';
+		if (width >= 600) return '24px';
 		else return '16px';
 	};
 
