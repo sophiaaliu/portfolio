@@ -63,6 +63,8 @@ export const Dropdown = (props: DropdownProps) => {
 					[styles.isDropdownOpen]: isDropdownOpen,
 				})}
 				onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+				onMouseEnter={() => setIsDropdownOpen(true)}
+				onMouseLeave={() => setIsDropdownOpen(false)}
 				ref={selectedRef}
 			>
 				<div className={styles.label}>{selectedOption.label}</div>
