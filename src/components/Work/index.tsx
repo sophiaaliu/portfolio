@@ -6,24 +6,15 @@ import { Suspense } from 'react';
 export type WorkProps = {
 	title: string;
 	description: string;
+	summary: string;
 	className?: string;
 	imageSrc: string;
 	imageHref: string;
 };
 
 export const Work = (props: WorkProps) => {
-	const { imageSrc, imageHref, title, description, className } = props;
+	const { imageSrc, imageHref, title, summary, description, className } = props;
 	const { width } = useWindowSize();
-
-	const getTitleFontSize = () => {
-		if (width >= 600) return '32px';
-		else return '20px';
-	};
-
-	const getDescriptionFontSize = () => {
-		if (width >= 600) return '24px';
-		else return '16px';
-	};
 
 	return (
 		<div className={cls(styles.work, className)}>
@@ -41,23 +32,27 @@ export const Work = (props: WorkProps) => {
 					[styles.stack]: width < 600,
 				})}
 			>
-				<div
-					className={cls(styles.title, {
-						[styles.stack]: width < 600,
-					})}
-					style={{
-						fontSize: getTitleFontSize(),
-					}}
-				>
-					{title}
+				<div className={cls(styles.info)}>
+					<div
+						className={cls(styles.title, {
+							[styles.smallFont]: width < 800,
+						})}
+					>
+						{title}
+					</div>
+					<div
+						className={cls(styles.summary, {
+							[styles.smallFont]: width < 800,
+						})}
+					>
+						{summary}
+					</div>
 				</div>
 				<div
 					className={cls(styles.description, {
 						[styles.stack]: width < 600,
+						[styles.smallFont]: width < 800,
 					})}
-					style={{
-						fontSize: getDescriptionFontSize(),
-					}}
 				>
 					{description}
 				</div>

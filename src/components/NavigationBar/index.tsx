@@ -123,7 +123,7 @@ export const NavigationBar = () => {
 							})}
 							to="/"
 						>
-							<span>ABOUT</span>
+							<span>RESUME</span>
 						</Link>
 						<Link
 							className={cls(styles.link, {
@@ -131,7 +131,7 @@ export const NavigationBar = () => {
 							})}
 							to="/"
 						>
-							<span>RESUME</span>
+							<span>ABOUT</span>
 						</Link>
 					</>
 				)}
@@ -150,7 +150,7 @@ export const NavigationBar = () => {
 							})}
 							to="/"
 						>
-							Work
+							WORK
 						</Link>
 						<Link
 							className={cls(styles.link, {
@@ -158,7 +158,7 @@ export const NavigationBar = () => {
 							})}
 							to="/"
 						>
-							About
+							RESUME
 						</Link>
 						<Link
 							className={cls(styles.link, {
@@ -166,7 +166,7 @@ export const NavigationBar = () => {
 							})}
 							to="/"
 						>
-							Resume
+							ABOUT
 						</Link>
 					</div>
 				)}

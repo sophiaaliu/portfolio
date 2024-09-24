@@ -85,9 +85,11 @@ export const Home = () => {
 						Linkedin
 					</div>
 				</div>
-				<div className={styles.browseProjectsPrompt}>
-					<BrowseWorkPrompt onClick={onBrowseWork} />
-				</div>
+				{false && (
+					<div className={styles.browseProjectsPrompt}>
+						<BrowseWorkPrompt onClick={onBrowseWork} />
+					</div>
+				)}
 			</div>
 			<div
 				className={cls(
@@ -96,27 +98,30 @@ export const Home = () => {
 				)}
 			>
 				<Work
-					imageSrc="./images/develop_for_good.png"
-					imageHref="https://sophias-stellar-site-f53327.webflow.io/work/project-1"
-					title="Horizon: Silver Lining Mentoring"
-					description="How I designed for 1-1 relationship growth in the foster care community"
-					className={cls(styles.work, {
-						[styles.smallMarginBottom]: width < 1200,
-					})}
-				/>
-				<Work
 					imageSrc="./images/tempo.png"
-					imageHref="https://sophias-stellar-site-f53327.webflow.io/work/project-1"
-					title="Tempo Labs"
+					imageHref="https://sophiaa-liu.webflow.io/tempo-ai"
+					title="Tempo Labs (YC S23)"
+					summary="Start-up / 10 weeks / Internship / 2024"
 					description="How I streamlined the flow of idea to MVP for start-up founders"
 					className={cls(styles.work, {
 						[styles.smallMarginBottom]: width < 1200,
 					})}
 				/>
 				<Work
+					imageSrc="./images/develop_for_good.png"
+					imageHref="https://sophiaa-liu.webflow.io/develop-for-good"
+					title="Horizon: Silver Lining Mentoring"
+					summary="Develop for Good / 16 weeks / Volunteer / 2024"
+					description="Streamlining the flow of idea to MVP for start-up founders"
+					className={cls(styles.work, {
+						[styles.smallMarginBottom]: width < 1200,
+					})}
+				/>
+				<Work
 					imageSrc="./images/wayfarer.png"
-					imageHref="https://sophiaa-liu-wayfarer.webflow.io/project-1"
+					imageHref="https://sophiaa-liu.webflow.io/wayfarer"
 					title="Wayfarer AI"
+					summary="passion project / 12 weeks / 2024"
 					description="How I designed for AI co-pilot in a travel-planning app"
 					className={cls(styles.work, {
 						[styles.smallMarginBottom]: width < 1200,
