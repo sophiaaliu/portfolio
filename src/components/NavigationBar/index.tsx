@@ -5,7 +5,9 @@ import { useWindowSize } from '../../lib/hooks';
 import { useEffect, useRef, useState } from 'react';
 import { Easing, Tween } from '@tweenjs/tween.js';
 
-export const NavigationBar = () => {
+export const NavigationBar = (props: { scrollToWorkSection: () => void }) => {
+	const { scrollToWorkSection } = props;
+
 	const { width } = useWindowSize();
 	const [isMenuOpened, setIsMenuOpened] = useState<boolean>(false);
 	const isNavBarExpanded = useRef<boolean>(true);
@@ -114,6 +116,7 @@ export const NavigationBar = () => {
 								[styles.smallMarginRightLink]: width < 1000,
 							})}
 							to="/"
+							onClick={() => scrollToWorkSection()}
 						>
 							<span>WORK</span>
 						</Link>
@@ -149,6 +152,7 @@ export const NavigationBar = () => {
 								[styles.smallMarginRightLink]: width < 1000,
 							})}
 							to="/"
+							onClick={() => scrollToWorkSection()}
 						>
 							WORK
 						</Link>

@@ -5,13 +5,36 @@ import { Work } from '../../components/Work';
 import { useWindowSize } from '../../lib/hooks';
 import { Layout1 } from './Layout1';
 import { Layout2 } from './Layout2';
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { Easing, Tween } from '@tweenjs/tween.js';
 import { LANDING_PAGE_ABOUT } from '../../lib/constants';
+import { useLocation } from 'react-router';
 
-export const Home = () => {
+export const Home = (props: {
+	setWorkSectionTop: React.Dispatch<React.SetStateAction<number>>;
+}) => {
+	const { setWorkSectionTop } = props;
+
 	const { width } = useWindowSize();
 	const landingPageRef = useRef<HTMLDivElement>(null);
+	const workPageRef = useRef<HTMLDivElement>(null);
+
+	const { pathname } = useLocation();
+
+	useEffect(() => {
+		console.log(pathname);
+		if (pathname === '/work') {
+			if (workPageRef.current) {
+				window.scrollTo(0, workPageRef.current.getBoundingClientRect().top ?? 0);
+			}
+		}
+	}, [pathname]);
+
+	useEffect(() => {
+		if (workPageRef.current) {
+			setWorkSectionTop(workPageRef.current.getBoundingClientRect().top ?? 0);
+		}
+	}, [workPageRef.current]);
 
 	const getLayout = () => {
 		if (width >= 800) return <Layout1 />;
@@ -96,6 +119,7 @@ export const Home = () => {
 					styles.workPage,
 					width >= 800 ? styles.defaultPaddingTop : styles.smallPaddingTop,
 				)}
+				ref={workPageRef}
 			>
 				<Work
 					imageSrc="./images/tempo.png"
